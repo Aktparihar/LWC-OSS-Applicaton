@@ -1,0 +1,55 @@
+<template >
+    <div class="slds-m-left_medium container">
+
+        <!-- Contact Detail Form -->
+
+        <div class="slds-form-element">
+            <label class="slds-form-element__label heading-search alignCenter " for="form-element-01">Create Contact</label>
+            <div class="slds-form-element__control ">
+                <input type="text"  name="firstName" value={firstName}
+                onchange={handleName} placeholder="Enter First Name" />
+                <br/>
+                <input type="text"  name="lastName" value={lastName}
+                onchange={handleName} placeholder="Enter Last Name" class="slds-input" />
+                <br/>
+                <input type="email"  name="email" value={email}
+                onchange={handleName} placeholder="Enter Email" class="slds-input" />
+                <br/>
+                <input type="number"  name="phone" value={phone}
+                onchange={handleName} placeholder="Enter Phone (Should be 10 digits)" class="slds-input" />
+                <br/>
+                <div class="alignCenter">
+                    <button type="button" class="slds-m-left_x-small slds-button slds-button_success alignCenter" 
+                    onclick={handleCreateContact}>Create Contact</button>
+                </div>
+              
+            </div>
+          </div>
+         
+
+
+        <div class="list ">
+            <p class="slds-form-element__label heading-search alignCenter">Search Contact</p>
+            <div class="alignCenter slds-m-bottom_x-small">
+                <input
+                type="search" 
+                placeholder="Search contacts..."
+                oninput={handleSearchKeyInput}
+            />
+            </div>
+           
+            <div >
+                <template for:each={sessions} for:item="session" for:index="index">
+                    <div key={session.id} class="session alignCenter">
+                        <div >
+                            <p class="title">Contact Name : <span class="acc-name">{session.name}</span></p>
+                            <p  if:true={session.email} class="title">Contact Email : <span class="acc-name">{session.email}</span></p>
+                            <p  if:true={session.phone} class="title">Contact Phone : <span class="acc-name">{session.phone}</span></p>
+                        </div>
+                    </div>       
+                </template>
+            </div>
+            
+        </div>
+</div>
+</template>

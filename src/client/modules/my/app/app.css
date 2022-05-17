@@ -1,0 +1,65 @@
+.content1{
+    width: 90%;
+    margin: auto auto;
+}
+
+
+header {
+    padding: 1rem;
+    display: flex;
+    color: #ffffff;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    /* background-image:  linear-gradient(to right top, #e876cc, #8e9bd3, #6eaee0, #55c0df, #5aced2); */
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-class{
+    text-decoration: none;
+    color: white
+}
+
+header img {
+    height: 3rem;
+    margin-right: 0.3rem;
+}
+header h2 {
+    font-size: 2.75rem;
+    font-weight: 300;
+    /* background-image: linear-gradient(to top, #b6f183, #b8a2fe, #85c5ff, #7fdfff, #b6f183);
+    padding: 20px;
+    border-radius: 20px; */
+}
+
+header .actions {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("https://wallpaperaccess.com/full/1278183.png");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    margin: 30px;
+  }
+
+header button.brand {
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.navbar-color{
+    background-color:rgba(145, 216, 237);
+    color: white;
+    padding: 10px,
+}
+
+.user-display-name{
+    margin-right: 5px;
+    letter-spacing: 2;
+}

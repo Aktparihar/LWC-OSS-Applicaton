@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-m-left_medium container alignCenter">
+
+        <!-- Account Detail Form -->
+
+          <div class="slds-form-element ">
+            <label class="slds-form-element__label heading-search alignCenter" for="form-element-01">Create Bank Account</label>
+            <div class="slds-form-element__control">
+                <input type="text"  name="accountHolder"  value={accountHolder}
+                onchange={handleName} placeholder="Enter Name" class="slds-input" />
+                <br/>
+                <input type="date"  name="openingDate"   value={openingDate}
+                onchange={handleName} placeholder="Enter Name" class="slds-input" />
+                <br/>
+                <input type="date"  name="closingDate"   value={closingDate}
+                onchange={handleName} placeholder="Enter Name" class="slds-input" />
+                <br/>
+                <input type="text" name="branch"   value={branch}
+                onchange={handleName} placeholder="Enter Name" class="slds-input" />
+                <br/>
+                <div class="alignCenter">
+                    <button type="button" class="slds-m-left_x-small slds-button slds-button_success alignCenter" 
+                    onclick={handleCreateAccount}>Create Bank Account</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+</template>

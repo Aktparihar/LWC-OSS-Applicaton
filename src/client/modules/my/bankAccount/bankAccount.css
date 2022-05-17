@@ -1,0 +1,35 @@
+:host {
+    width: 100%;
+    padding: 2rem;
+    color: #080707;
+}
+
+.container{
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+
+.alignCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-search{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+input {
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    transition: border 0.1s linear, background-color 0.1s linear;
+    display: inline-block;
+    padding: 0 1rem 0 0.75rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    width: 25rem;
+    margin-bottom: 10px;
+}

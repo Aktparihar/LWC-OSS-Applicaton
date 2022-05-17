@@ -1,0 +1,63 @@
+<template>
+    <lwce-router>
+        <header>
+            <lwce-link class="header-class" href="/">
+                <h2 class="slds-m-left_medium header header-class">MTX Bank</h2>
+            </lwce-link> 
+            <div class="actions">
+                <template if:true={loggedUser}>
+                    <span class="user-display-name">{loggedUser.display_name}</span>
+                    <br />
+                    <lwce-link class="slds-m-right_medium" href="/">
+                        <button type="button" class="slds-button slds-button_outline-brand">Home</button>
+                    </lwce-link>
+                    <lwce-link class="slds-m-right_medium" href="/bankaccount">
+                        <button type="button" class="slds-button slds-button_outline-brand">Bank Account</button>
+                    </lwce-link>
+                        <lwce-link class="slds-m-right_medium" href="/contacts">
+                            <button type="button" class="slds-button slds-button_outline-brand">Contacts</button>
+                        </lwce-link>
+                        <lwce-link class="slds-m-right_medium" href="/accounts">
+                            <button type="button" class="slds-button slds-button_outline-brand">Accounts</button>
+                        </lwce-link>
+                        <lwce-link class="slds-m-right_medium" href="/about">
+                            <button type="button" class="slds-button slds-button_outline-brand">About</button>
+                        </lwce-link>
+
+                  
+                    <a href="/oauth2/logout">
+                        <button type="button" class="slds-button slds-button_destructive">Log Out</button>
+                    </a>
+                </template>
+            </div>
+        </header>
+        <template if:true={isLoginView}>
+            <div>
+                <my-login-view></my-login-view>
+            </div>
+            
+        </template>
+       
+            <lwce-route path="/accounts" exact>
+                <main class="slds-m-left_medium content1" if:true={isSessionListView}>  
+                        <my-account-list></my-account-list>  
+                </main>
+            </lwce-route>
+            <lwce-route path="/contacts" exact>
+                <main class="slds-m-left_medium content1" if:true={isSessionListView}>
+                    <my-contact-list></my-contact-list>
+            </main> 
+            </lwce-route>
+            <lwce-route path="/bankaccount" exact>
+                <main class="slds-m-left_medium content1" if:true={isSessionListView}>
+                    <my-bank-account></my-bank-account>
+            </main> 
+            </lwce-route>
+
+            <lwce-route path="/" exact>
+               <div class="hero-image"></div> 
+            </lwce-route>
+            
+           
+        </lwce-router>
+</template>

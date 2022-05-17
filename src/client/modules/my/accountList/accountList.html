@@ -1,0 +1,44 @@
+<template >
+    <div class="slds-m-left_medium container">
+
+        <!-- Account Detail Form -->
+
+          <div class="slds-form-element ">
+            <label class="slds-form-element__label heading-search alignCenter" for="form-element-01">Create Account</label>
+            <div class="slds-form-element__control alignCenter slds-m-bottom_x-small">
+                <input type="text" id="single-form-element-id-02"  value={name}
+                onchange={handleName} placeholder="Enter Name" class="slds-input" />           
+            </div>
+            <div class="alignCenter">
+                <button type="button" class="slds-m-left_x-small slds-button slds-button_success " 
+                onclick={handleCreateAccount}>Create Account</button>
+            </div>
+          </div>
+         
+
+
+        <div class="list ">
+            <p class="slds-form-element__label heading-search alignCenter">Search Account</p>
+            <div class="alignCenter slds-m-bottom_x-small">
+                <input
+                type="search"           
+                placeholder="Search accounts..."
+                oninput={handleSearchKeyInput}
+            />
+            </div>
+           
+            <div >
+                <template for:each={sessions} for:item="session" for:index="index">
+                    <div key={session.id} class="session alignCenter">
+                        <div >
+                            <p class="title">Account Name : <span class="acc-name">{session.name}</span></p>
+                            <p  if:true={session.industry} class="title">Account Industry : <span class="acc-name">{session.industry}</span></p>
+                            <p  if:true={session.phone} class="title">Account Phone : <span class="acc-name">{session.phone}</span></p>
+                        </div>
+                    </div>       
+                </template>
+            </div>
+            
+        </div>
+</div>
+</template>
